@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-03-16T07:59:02</DateModified>
+  <DateModified>2017-03-16T09:04:10</DateModified>
   <ModuleName>main</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/ROM_v2/circuit/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/ROM_v2/circuit/DUO_LX9</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/ROM_v2/circuit/DUO_LX9\</ImplementationReportsDirectory>
   <DateInitialized>2017-03-16T07:59:02</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
