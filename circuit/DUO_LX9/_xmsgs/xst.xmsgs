@@ -11,13 +11,24 @@
 <msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 129: <arg fmt="%s" index="1">count_2</arg> should be on the sensitivity list of the process
 </msg>
 
+<<<<<<< HEAD
 <msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 159: <arg fmt="%s" index="1">wheretoread</arg> should be on the sensitivity list of the process
+=======
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 118: <arg fmt="%s" index="1">count_2</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 53: Net &lt;<arg fmt="%s" index="1">bin_value[7]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 148: <arg fmt="%s" index="1">wheretoread</arg> should be on the sensitivity list of the process
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
 </msg>
 
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">outp</arg>&lt;<arg fmt="%d" index="2">1</arg>:<arg fmt="%d" index="3">4</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">main</arg>&gt;.
+</msg>
+
+<<<<<<< HEAD
 <msg type="error" file="Xst" num="2864" delta="old" >Unit &lt;<arg fmt="%s" index="1">main</arg>&gt; : The conversion of memory element &lt;<arg fmt="%s" index="2">MyRom</arg>&gt; to macro RAM failed, because the memory write is asynchronous. Please review the Xilinx resources documentation and the XST user manual for coding guidelines or check the warning messages in the log file about unconnected clocks.
+=======
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">outp</arg>&lt;<arg fmt="%d" index="2">4</arg>:<arg fmt="%d" index="3">7</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">main</arg>&gt;.
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
 </msg>
 
 </messages>

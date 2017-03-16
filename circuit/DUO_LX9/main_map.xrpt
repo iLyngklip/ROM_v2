@@ -5,7 +5,11 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
+<<<<<<< HEAD
   <application stringID="Map" timeStamp="Thu Mar 16 10:36:25 2017">
+=======
+  <application stringID="Map" timeStamp="Thu Mar 16 10:03:00 2017">
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -104,10 +108,17 @@
       <section stringID="MAP_DESIGN_SUMMARY">
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
+<<<<<<< HEAD
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="1"/>
         <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="426652"/>
         <item stringID="MAP_TOTAL_REAL_TIME" value="22 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="22 secs "/>
+=======
+        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="373020"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="4 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="4 secs "/>
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
       </section>
       <section stringID="MAP_SLICE_REPORTING">
         <item AVAILABLE="11440" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="60">

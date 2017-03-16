@@ -5611,7 +5611,11 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 228
 
+<<<<<<< HEAD
 Total memory usage is 199472 kilobytes
+=======
+Total memory usage is 187824 kilobytes
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
 
 Writing NGD file "main.ngd" ...
 Total REAL time to NGDBUILD completion:  6 sec

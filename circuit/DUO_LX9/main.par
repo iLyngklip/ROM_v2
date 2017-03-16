@@ -1,7 +1,11 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
+<<<<<<< HEAD
 MATHIASLYNG22BC::  Thu Mar 16 10:36:28 2017
+=======
+MATHIASLYNG22BC::  Thu Mar 16 10:03:03 2017
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
 
 par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
 
@@ -166,7 +170,11 @@ All signals are completely routed.
 Total REAL time to PAR completion: 32 secs 
 Total CPU time to PAR completion: 33 secs 
 
+<<<<<<< HEAD
 Peak Memory Usage:  404 MB
+=======
+Peak Memory Usage:  328 MB
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -50,7 +50,7 @@ architecture Behavioral of main is
 	signal whereToRead : integer range 0 to 45 := 0;
 	
 	-- READ STUFF
-	signal bin_value : std_logic_vector (7 downto 0) := (others => '0');
+	signal bin_value : std_logic_vector (7 downto 0);
 	
 	
 begin -- MAIN BEGIN
@@ -91,6 +91,7 @@ process
 			READ (line_num,line_content);  
 			--For each character in the line convert it to binary value.
 			--And then store it in a signal named 'bin_value'.
+<<<<<<< HEAD
 			for j in 1 to 6 loop		 
 				char := line_content(j);
 				if(char = '0') then
@@ -99,6 +100,14 @@ process
 					bin_value(6-j) <= '1';
 				else 
 					bin_value(7) <= '1';
+=======
+			for j in 1 to 4 loop		
+				char := line_content(j);
+				if(char = '0') then
+					bin_value(4-j) <= '0';
+				else
+					bin_value(4-j) <= '1';
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
 				end if;	
 			end loop;	
 			--wait for 10 ns; --after reading each line wait for 10ns.
@@ -145,6 +154,7 @@ begin
 --				outp(7) <= tempStorage(7); 
 --				outp <= RAM(2);
 
+<<<<<<< HEAD
 		 outp <= MyRom(whereToRead);
 --		outp(0) <= bin_value(0);
 --		outp(1) <= bin_value(1);
@@ -157,6 +167,17 @@ begin
 
 	else
 		WhereToRead <= WhereToRead + 1;
+=======
+		-- outp <= MyRom(whereToRead);
+		outp(0) <= bin_value(0);
+		outp(1) <= bin_value(1);
+		outp(2) <= bin_value(2);
+		outp(3) <= bin_value(3);
+		outp(4) <= '0';
+		outp(5) <= '0';
+		outp(6) <= '0';
+		outp(7) <= '0';
+>>>>>>> parent of e82de89... Det virker! Den læser fra en fil
 		
 --	elsif clk_2='0' and clk_2'event then 
 --		if whereToRead > 45 then
