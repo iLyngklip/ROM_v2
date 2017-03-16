@@ -34,8 +34,9 @@ use std.textio.all;
 --use UNISIM.VComponents.all;
 
 entity main is
-	Port ( outp : out  STD_LOGIC_VECTOR (7 downto 0);
-			  clk : in STD_LOGIC);
+	Port 	(	outp : out  STD_LOGIC_VECTOR (7 downto 0);
+				clk : in STD_LOGIC
+			);
 end main;
 
 architecture Behavioral of main is
@@ -44,24 +45,88 @@ architecture Behavioral of main is
 	type ROM8x8 is array(0 to 7) of std_logic_vector (7 downto 0);
 	signal MyRom : ROM8x8;
 	
+	
+	
+	
+	
 	-- CLOCKS --
 	signal clk_2 : std_logic;
 	signal count_2 : unsigned (30 downto 0) := (others => '0');
 	signal whereToRead : integer range 0 to 7 := 0;
 	
+	-- READ STUFF
+	signal bin_value : std_logic_vector (7 downto 0) := (others => '0');
+	
 	
 begin -- MAIN BEGIN
+	
 
-	MyRom <= (
-			"00000001",
-			"00000010",
-			"00000100",
-			"00001000",
-			"00010000",
-			"00100000",
-			"01000000",
-			"10000000"
-			);
+	
+	
+	
+	
+	
+--	MyRom <= (
+--			"00000001",
+--			"00000010",
+--			"00000100",
+--			"00001000",
+--			"00010000",
+--			"00100000",
+--			"01000000",
+--			"10000000"
+--			);
+			
+	
+	
+-- READ STUFF ------------------- READ STUFF ----------------------------
+process  
+      file file_pointer : text;
+		variable line_content : string(1 to 4);
+      variable line_num : line;
+		variable j : integer := 0;
+		variable char : character:='0';
+		variable i : integer := 0;
+		
+   begin
+		--Open the file read.txt from the specified location for reading(READ_MODE).
+      file_open(file_pointer,"C:\ROM_v2\circuit\read.txt", READ_MODE);	  
+      while not endfile(file_pointer) loop --till the end of file is reached continue.
+			readline (file_pointer,line_num);  --Read the whole line from the file
+			--Read the contents of the line from  the file into a variable.
+			READ (line_num,line_content);  
+			--For each character in the line convert it to binary value.
+			--And then store it in a signal named 'bin_value'.
+			for j in 1 to 4 loop		 
+				char := line_content(j);
+				if(char = '0') then
+					bin_value(4-j) <= '0';
+				elsif (char = '1') then 
+					bin_value(4-j) <= '1';
+				else 
+					bin_value(7) <= '1'; 
+				end if;	
+			end loop;	
+			--wait for 10 ns; --after reading each line wait for 10ns.
+			MyRom(i) <= bin_value;
+			i := i + 1;
+			
+      end loop;
+      file_close(file_pointer);  --after reading all the lines close the file.	
+		--wait; -- på hvad?
+    end process;
+	 
+-- END OF READ STUFF --------- END OF READ STUFF ----------- END OF READ STUFF ---------------
+
+
+
+	 
+			
+			
+			
+			
+			
+			
 			
 -- PROCESS CLOCK ---------------- MAIN CLOCK --------			
 	process(clk)
@@ -88,11 +153,20 @@ begin
 --				outp(7) <= tempStorage(7); 
 --				outp <= RAM(2);
 
-		outp <= MyRom(whereToRead);
+	--
+	--outp(0) <= MyRom(whereToRead)(0);
+--		outp(0) <= bin_value(0);
+--		outp(1) <= bin_value(1);
+--		outp(2) <= bin_value(2);
+--		outp(3) <= bin_value(3);
+--		outp(4) <= '0';
+--		outp(5) <= '0';
+--		outp(6) <= '0';
+--		outp(7) <= bin_value(7);
 		
-	elsif clk_2='0' and clk_2'event then
+	else 
 		whereToRead <= whereToRead + 1;
-		outp <= (others => '1');
+		--outp <= (others => '1');
 	end if;
 end process; 
 
@@ -102,5 +176,26 @@ end process;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end Behavioral; -- MAIN END
+
+
+
+
+
 

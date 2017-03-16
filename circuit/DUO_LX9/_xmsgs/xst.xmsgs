@@ -5,34 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 72: <arg fmt="%s" index="1">count_2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 83: Possible infinite loop; process does not have a wait statement
 </msg>
 
-<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_whereToRead[2]_MyRom[7][7]_wide_mux_10_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 83: Assignment to <arg fmt="%s" index="1">myrom</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">count_2_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 137: <arg fmt="%s" index="1">count_2</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_2_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 168: <arg fmt="%s" index="1">wheretoread</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_2_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 58: Net &lt;<arg fmt="%s" index="1">bin_value[7]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_2_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_2_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_2_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_2_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">bin_value&lt;7:4&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">main</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
 </msg>
 
 </messages>

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: main.prj
 
@@ -111,13 +111,17 @@ Cores Search Directories           : {"../../../DesignLab-1.0.8/libraries/Benchy
 Parsing VHDL file "C:\ROM_v2\circuit\main.vhd" into library work
 Parsing entity <main>.
 Parsing architecture <Behavioral> of entity <main>.
+WARNING:HDLCompiler:1369 - "C:\ROM_v2\circuit\main.vhd" Line 83: Possible infinite loop; process does not have a wait statement
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating entity <main> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 72: count_2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:\ROM_v2\circuit\main.vhd" Line 83: Assignment to myrom ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 137: count_2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 168: wheretoread should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "C:\ROM_v2\circuit\main.vhd" Line 58: Net <bin_value[7]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -125,32 +129,15 @@ WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 72: count_2 should be
 
 Synthesizing Unit <main>.
     Related source file is "C:\ROM_v2\circuit\main.vhd".
-    Found 8-bit register for signal <outp>.
-    Found 3-bit register for signal <whereToRead>.
-    Found 31-bit register for signal <count_2>.
-    Found 31-bit adder for signal <count_2[30]_GND_8_o_add_8_OUT> created at line 1241.
-    Found 3-bit adder for signal <whereToRead[2]_GND_8_o_add_11_OUT> created at line 94.
-    Found 8x8-bit Read Only RAM for signal <whereToRead[2]_MyRom[7][7]_wide_mux_10_OUT>
+WARNING:Xst:2935 - Signal 'bin_value<7:4>', unconnected in block 'main', is tied to its initial value (0000).
     Summary:
-	inferred   1 RAM(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred  42 D-type flip-flop(s).
+	no macro.
 Unit <main> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Macro Statistics
-# RAMs                                                 : 1
- 8x8-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 2
- 3-bit adder                                           : 1
- 31-bit adder                                          : 1
-# Registers                                            : 3
- 3-bit register                                        : 1
- 31-bit register                                       : 1
- 8-bit register                                        : 1
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -158,46 +145,15 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <main>.
-The following registers are absorbed into counter <count_2>: 1 register on signal <count_2>.
-The following registers are absorbed into counter <whereToRead>: 1 register on signal <whereToRead>.
-INFO:Xst:3231 - The small RAM <Mram_whereToRead[2]_MyRom[7][7]_wide_mux_10_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 8-word x 8-bit                      |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <whereToRead>   |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <main> synthesized (advanced).
-
 =========================================================================
 Advanced HDL Synthesis Report
 
-Macro Statistics
-# RAMs                                                 : 1
- 8x8-bit single-port distributed Read Only RAM         : 1
-# Counters                                             : 2
- 3-bit up counter                                      : 1
- 31-bit up counter                                     : 1
-# Registers                                            : 8
- Flip-Flops                                            : 8
-
+Found no macro
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2677 - Node <count_2_24> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <count_2_25> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <count_2_26> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <count_2_27> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <count_2_28> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <count_2_29> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <count_2_30> of sequential type is unconnected in block <main>.
 
 Optimizing unit <main> ...
 
@@ -210,10 +166,7 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Macro Statistics
-# Registers                                            : 35
- Flip-Flops                                            : 35
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -235,22 +188,6 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 85
-#      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 23
-#      LUT2                        : 1
-#      LUT3                        : 9
-#      MUXCY                       : 23
-#      VCC                         : 1
-#      XORCY                       : 24
-# FlipFlops/Latches                : 35
-#      FD                          : 32
-#      FDE                         : 3
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 8
-#      OBUF                        : 8
 
 Device utilization summary:
 ---------------------------
@@ -259,23 +196,19 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              35  out of  11440     0%  
- Number of Slice LUTs:                   36  out of   5720     0%  
-    Number used as Logic:                36  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     36
-   Number with an unused Flip Flop:       1  out of     36     2%  
-   Number with an unused LUT:             0  out of     36     0%  
-   Number of fully used LUT-FF pairs:    35  out of     36    97%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                           9
- Number of bonded IOBs:                   9  out of    102     8%  
+ Number of bonded IOBs:                   0  out of    102     0%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -295,13 +228,7 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-count_2_23                         | NONE(outp_0)           | 11    |
-clk                                | BUFGP                  | 24    |
------------------------------------+------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+No clock signals found in this design
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -311,9 +238,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.076ns (Maximum Frequency: 245.339MHz)
+   Minimum period: No path found
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 4.118ns
+   Maximum output required time after clock: No path found
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -321,125 +248,21 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'count_2_23'
-  Clock period: 4.076ns (frequency: 245.339MHz)
-  Total number of paths / destination ports: 30 / 11
--------------------------------------------------------------------------
-Delay:               2.038ns (Levels of Logic = 1)
-  Source:            whereToRead_2 (FF)
-  Destination:       outp_0 (FF)
-  Source Clock:      count_2_23 falling
-  Destination Clock: count_2_23 rising
-
-  Data Path: whereToRead_2 to outp_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              9   0.525   1.204  whereToRead_2 (whereToRead_2)
-     LUT3:I0->O            1   0.235   0.000  Mram_whereToRead[2]_MyRom[7][7]_wide_mux_10_OUT41 (Mram_whereToRead[2]_MyRom[7][7]_wide_mux_10_OUT4)
-     FD:D                      0.074          outp_4
-    ----------------------------------------
-    Total                      2.038ns (0.834ns logic, 1.204ns route)
-                                       (40.9% logic, 59.1% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 2.468ns (frequency: 405.268MHz)
-  Total number of paths / destination ports: 300 / 24
--------------------------------------------------------------------------
-Delay:               2.468ns (Levels of Logic = 25)
-  Source:            count_2_0 (FF)
-  Destination:       count_2_23 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: count_2_0 to count_2_23
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               1   0.525   0.681  count_2_0 (count_2_0)
-     INV:I->O              1   0.255   0.000  Mcount_count_2_lut<0>_INV_0 (Mcount_count_2_lut<0>)
-     MUXCY:S->O            1   0.215   0.000  Mcount_count_2_cy<0> (Mcount_count_2_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<1> (Mcount_count_2_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<2> (Mcount_count_2_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<3> (Mcount_count_2_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<4> (Mcount_count_2_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<5> (Mcount_count_2_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<6> (Mcount_count_2_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<7> (Mcount_count_2_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<8> (Mcount_count_2_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<9> (Mcount_count_2_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<10> (Mcount_count_2_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<11> (Mcount_count_2_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<12> (Mcount_count_2_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<13> (Mcount_count_2_cy<13>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<14> (Mcount_count_2_cy<14>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<15> (Mcount_count_2_cy<15>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<16> (Mcount_count_2_cy<16>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<17> (Mcount_count_2_cy<17>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<18> (Mcount_count_2_cy<18>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<19> (Mcount_count_2_cy<19>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<20> (Mcount_count_2_cy<20>)
-     MUXCY:CI->O           1   0.023   0.000  Mcount_count_2_cy<21> (Mcount_count_2_cy<21>)
-     MUXCY:CI->O           0   0.023   0.000  Mcount_count_2_cy<22> (Mcount_count_2_cy<22>)
-     XORCY:CI->O           1   0.206   0.000  Mcount_count_2_xor<23> (Result<23>)
-     FD:D                      0.074          count_2_23
-    ----------------------------------------
-    Total                      2.468ns (1.787ns logic, 0.681ns route)
-                                       (72.4% logic, 27.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'count_2_23'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              4.118ns (Levels of Logic = 1)
-  Source:            outp_7 (FF)
-  Destination:       outp<7> (PAD)
-  Source Clock:      count_2_23 rising
-
-  Data Path: outp_7 to outp<7>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               1   0.525   0.681  outp_7 (outp_7)
-     OBUF:I->O                 2.912          outp_7_OBUF (outp<7>)
-    ----------------------------------------
-    Total                      4.118ns (3.437ns logic, 0.681ns route)
-                                       (83.5% logic, 16.5% route)
-
-=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    2.468|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock count_2_23
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    2.964|         |
-count_2_23     |         |    2.038|    2.573|         |
----------------+---------+---------+---------+---------+
-
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.09 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.83 secs
  
 --> 
 
-Total memory usage is 248492 kilobytes
+Total memory usage is 245912 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 
