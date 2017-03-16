@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Mar 16 08:37:55 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+PROHIBIT = SITE "P144";
+PROHIBIT = SITE "P69";
+PROHIBIT = SITE "P60";
+COMP "clk" LOCATE = SITE "P94" LEVEL 1;
+COMP "outp<0>" LOCATE = SITE "P55" LEVEL 1;
+COMP "outp<1>" LOCATE = SITE "P50" LEVEL 1;
+COMP "outp<2>" LOCATE = SITE "P47" LEVEL 1;
+COMP "outp<3>" LOCATE = SITE "P121" LEVEL 1;
+COMP "outp<4>" LOCATE = SITE "P123" LEVEL 1;
+COMP "outp<5>" LOCATE = SITE "P124" LEVEL 1;
+COMP "outp<6>" LOCATE = SITE "P126" LEVEL 1;
+COMP "outp<7>" LOCATE = SITE "P127" LEVEL 1;
+SCHEMATIC END;
+
