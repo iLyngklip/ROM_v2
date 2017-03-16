@@ -5,13 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 49: Syntax error near &quot;<arg fmt="%s" index="1">minrom</arg>&quot;.
-</msg>
-
 <msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 103: Possible infinite loop; process does not have a wait statement
 </msg>
 
-<msg type="error" file="HDLCompiler" num="854" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 42: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 103: Assignment to <arg fmt="%s" index="1">myrom</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 157: <arg fmt="%s" index="1">count_2</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 188: <arg fmt="%s" index="1">wheretoread</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 77: Net &lt;<arg fmt="%s" index="1">bin_value[7]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">bin_value&lt;7:4&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">main</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
 </msg>
 
 </messages>

@@ -80,12 +80,6 @@ architecture Behavioral of main is
 begin -- MAIN BEGIN
 	
 
-	minrom : entity work.rom
-	port map (
-		stuff_to_save => data_out,
-		WhereToRead => adress
-	);
-	
 	
 	
 	
@@ -180,7 +174,7 @@ begin
 --				outp <= RAM(2);
 
 	--
-	--outp(0) <= MyRom(whereToRead)(0);
+		-- outp(0) <= MyRom(whereToRead);
 --		outp(0) <= bin_value(0);
 --		outp(1) <= bin_value(1);
 --		outp(2) <= bin_value(2);
