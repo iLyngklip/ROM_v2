@@ -55,16 +55,19 @@ architecture Behavioral of main is
 	
 begin -- MAIN BEGIN
 	
-	MyRom <= (
-			"00000001",
-			"00000010",
-			"00000100",
-			"00001000",
-			"00010000",
-			"00100000",
-			"01000000",
-			"10000000"
-			);
+
+	
+	
+--	MyRom <= (
+--			"00000001",
+--			"00000010",
+--			"00000100",
+--			"00001000",
+--			"00010000",
+--			"00100000",
+--			"01000000",
+--			"10000000"
+--			);
 			
 	
 	
@@ -74,7 +77,9 @@ process
 		variable line_content : string(1 to 4);
       variable line_num : line;
 		variable j : integer := 0;
-		variable char : character:='0'; 
+		variable char : character:='0';
+		variable i : integer := 0;
+		
    begin
 		--Open the file read.txt from the specified location for reading(READ_MODE).
       file_open(file_pointer,"C:\ROM_v2\circuit\read.txt", READ_MODE);	  
@@ -95,6 +100,9 @@ process
 				end if;	
 			end loop;	
 			--wait for 10 ns; --after reading each line wait for 10ns.
+			MyRom(i) <= bin_value;
+			i := i + 1;
+			
       end loop;
       file_close(file_pointer);  --after reading all the lines close the file.	
 		--wait; -- på hvad?
@@ -136,15 +144,15 @@ begin
 --				outp(7) <= tempStorage(7); 
 --				outp <= RAM(2);
 
-		-- outp <= MyRom(whereToRead);
-		outp(0) <= bin_value(0);
-		outp(1) <= bin_value(1);
-		outp(2) <= bin_value(2);
-		outp(3) <= bin_value(3);
-		outp(4) <= '0';
-		outp(5) <= '0';
-		outp(6) <= '0';
-		outp(7) <= bin_value(7);
+		outp <= MyRom(whereToRead);
+--		outp(0) <= bin_value(0);
+--		outp(1) <= bin_value(1);
+--		outp(2) <= bin_value(2);
+--		outp(3) <= bin_value(3);
+--		outp(4) <= '0';
+--		outp(5) <= '0';
+--		outp(6) <= '0';
+--		outp(7) <= bin_value(7);
 		
 	else 
 		whereToRead <= whereToRead + 1;

@@ -20,6 +20,8 @@ C:/DesignLab-1.0.8/examples/00.Papilio_Schematic_Library/Libraries/ZPUino_1/PSL_
 Papilio_DUO_LX9/papilio_duo.ucf -p xc6slx9-tqg144-2 main.ngc main.ngd
 
 Reading NGO file "C:/ROM_v2/circuit/DUO_LX9/main.ngc" ...
+Loading design module "C:\ROM_v2\circuit\DUO_LX9/main.ngc"...
+WARNING:NgdBuild:578 - Design contains no instances.
 Gathering constraint information from source properties...
 Done.
 
@@ -5609,9 +5611,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 228
+  Number of warnings: 229
 
-Total memory usage is 188272 kilobytes
+Total memory usage is 188208 kilobytes
 
 Writing NGD file "main.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec
