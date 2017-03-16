@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Mar 16 13:51:39 2017
+Mapped Date    : Thu Mar 16 14:34:17 2017
 
 Mapping design into LUTs...
 Running directed packing...
@@ -23,56 +23,72 @@ Total REAL time at the beginning of Placer: 3 secs
 Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:62d1ade3) REAL time: 3 secs 
+(Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 5.36  Local Placement Optimization (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 7.3  Local Placement Optimization (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 9.8  Global Placement
-Phase 9.8  Global Placement (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 9.8  Global Placement (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 11.18  Placement Optimization (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 12.5  Local Placement Optimization (Checksum:62d1ade3) REAL time: 4 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:62d1ade3) REAL time: 3 secs 
+Phase 13.34  Placement Validation (Checksum:62d1ade3) REAL time: 4 secs 
 
-Total REAL time to Placer completion: 3 secs 
-Total CPU  time to Placer completion: 3 secs 
+Total REAL time to Placer completion: 4 secs 
+Total CPU  time to Placer completion: 4 secs 
 Running post-placement packing...
 Writing output files...
+WARNING:PhysDesignRules:368 - The signal <outp<0>_OBUF> is incomplete. The
+   signal is not driven by any source pin in the design.
+WARNING:PhysDesignRules:368 - The signal <outp<1>_OBUF> is incomplete. The
+   signal is not driven by any source pin in the design.
+WARNING:PhysDesignRules:368 - The signal <outp<2>_OBUF> is incomplete. The
+   signal is not driven by any source pin in the design.
+WARNING:PhysDesignRules:368 - The signal <outp<3>_OBUF> is incomplete. The
+   signal is not driven by any source pin in the design.
+WARNING:PhysDesignRules:368 - The signal <outp<4>_OBUF> is incomplete. The
+   signal is not driven by any source pin in the design.
+WARNING:PhysDesignRules:368 - The signal <outp<5>_OBUF> is incomplete. The
+   signal is not driven by any source pin in the design.
+WARNING:PhysDesignRules:368 - The signal <outp<6>_OBUF> is incomplete. The
+   signal is not driven by any source pin in the design.
+WARNING:PhysDesignRules:368 - The signal <outp<7>_OBUF> is incomplete. The
+   signal is not driven by any source pin in the design.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    8
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of  11,440    0%
   Number of Slice LUTs:                          0 out of   5,720    0%
@@ -111,7 +127,7 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                0.00
 
-Peak Memory Usage:  289 MB
+Peak Memory Usage:  288 MB
 Total REAL time to MAP completion:  4 secs 
 Total CPU time to MAP completion:   4 secs 
 

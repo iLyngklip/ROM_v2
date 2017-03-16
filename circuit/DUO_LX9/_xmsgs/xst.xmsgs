@@ -5,40 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 103: Possible infinite loop; process does not have a wait statement
+<msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 83: Possible infinite loop; process does not have a wait statement
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="746" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 111: Range is empty (null range)
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 83: Assignment to <arg fmt="%s" index="1">myrom</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1587" delta="old" >"N:/P.20131013/rtf/vhdl/xst/src/textio.vhd" Line 50: Read failed due to size mismatch
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 137: <arg fmt="%s" index="1">count_2</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="220" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 125: Assignment ignored
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 168: <arg fmt="%s" index="1">wheretoread</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="746" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 126: Range is empty (null range)
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 58: Net &lt;<arg fmt="%s" index="1">bin_value[7]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 103: Assignment to <arg fmt="%s" index="1">char</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 183: <arg fmt="%s" index="1">count_2</arg> should be on the sensitivity list of the process
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 214: <arg fmt="%s" index="1">wheretoread</arg> should be on the sensitivity list of the process
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 77: Net &lt;<arg fmt="%s" index="1">bin_value[6]</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">bin_value</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">main</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">outp</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">7</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">outp</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">1</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">main</arg>&gt;.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">bin_value&lt;7:4&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">main</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
 </msg>
 
 </messages>

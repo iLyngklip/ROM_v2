@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: main.prj
 
@@ -111,21 +111,17 @@ Cores Search Directories           : {"../../../DesignLab-1.0.8/libraries/Benchy
 Parsing VHDL file "C:\ROM_v2\circuit\main.vhd" into library work
 Parsing entity <main>.
 Parsing architecture <Behavioral> of entity <main>.
-WARNING:HDLCompiler:1369 - "C:\ROM_v2\circuit\main.vhd" Line 103: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "C:\ROM_v2\circuit\main.vhd" Line 83: Possible infinite loop; process does not have a wait statement
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating entity <main> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:746 - "C:\ROM_v2\circuit\main.vhd" Line 111: Range is empty (null range)
-WARNING:HDLCompiler:1587 - "N:/P.20131013/rtf/vhdl/xst/src/textio.vhd" Line 50: Read failed due to size mismatch
-WARNING:HDLCompiler:220 - "C:\ROM_v2\circuit\main.vhd" Line 125: Assignment ignored
-WARNING:HDLCompiler:746 - "C:\ROM_v2\circuit\main.vhd" Line 126: Range is empty (null range)
-WARNING:HDLCompiler:1127 - "C:\ROM_v2\circuit\main.vhd" Line 103: Assignment to char ignored, since the identifier is never used
-WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 183: count_2 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 214: wheretoread should be on the sensitivity list of the process
-WARNING:HDLCompiler:634 - "C:\ROM_v2\circuit\main.vhd" Line 77: Net <bin_value[6]> does not have a driver.
+WARNING:HDLCompiler:1127 - "C:\ROM_v2\circuit\main.vhd" Line 83: Assignment to myrom ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 137: count_2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 168: wheretoread should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "C:\ROM_v2\circuit\main.vhd" Line 58: Net <bin_value[7]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -133,9 +129,7 @@ WARNING:HDLCompiler:634 - "C:\ROM_v2\circuit\main.vhd" Line 77: Net <bin_value[6
 
 Synthesizing Unit <main>.
     Related source file is "C:\ROM_v2\circuit\main.vhd".
-WARNING:Xst:2935 - Signal 'bin_value', unconnected in block 'main', is tied to its initial value (000000000).
-    WARNING:Xst:2404 -  FFs/Latches <outp<7:7>> (without init value) have a constant value of 1 in block <main>.
-    WARNING:Xst:2404 -  FFs/Latches <outp<7:1>> (without init value) have a constant value of 0 in block <main>.
+WARNING:Xst:2935 - Signal 'bin_value<7:4>', unconnected in block 'main', is tied to its initial value (0000).
     Summary:
 	no macro.
 Unit <main> synthesized.
@@ -194,11 +188,6 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2
-#      GND                         : 1
-#      VCC                         : 1
-# IO Buffers                       : 8
-#      OBUF                        : 8
 
 Device utilization summary:
 ---------------------------
@@ -217,7 +206,7 @@ Slice Logic Distribution:
 
 IO Utilization: 
  Number of IOs:                           9
- Number of bonded IOBs:                   8  out of    102     7%  
+ Number of bonded IOBs:                   0  out of    102     0%  
 
 Specific Feature Utilization:
 
@@ -266,14 +255,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.88 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.83 secs
  
 --> 
 
 Total memory usage is 245912 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
