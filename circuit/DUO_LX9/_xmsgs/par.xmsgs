@@ -11,35 +11,7 @@
 <msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">clk_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="warning" file="Par" num="289" delta="old" >The signal <arg fmt="%s" index="1">outp&lt;0&gt;_OBUF</arg> has no driver.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="289" delta="old" >The signal <arg fmt="%s" index="1">outp&lt;1&gt;_OBUF</arg> has no driver.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="289" delta="old" >The signal <arg fmt="%s" index="1">outp&lt;2&gt;_OBUF</arg> has no driver.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="289" delta="old" >The signal <arg fmt="%s" index="1">outp&lt;3&gt;_OBUF</arg> has no driver.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="289" delta="old" >The signal <arg fmt="%s" index="1">outp&lt;4&gt;_OBUF</arg> has no driver.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="289" delta="old" >The signal <arg fmt="%s" index="1">outp&lt;5&gt;_OBUF</arg> has no driver.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="289" delta="old" >The signal <arg fmt="%s" index="1">outp&lt;6&gt;_OBUF</arg> has no driver.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="289" delta="old" >The signal <arg fmt="%s" index="1">outp&lt;7&gt;_OBUF</arg> has no driver.  PAR will not attempt to route this signal.
-</msg>
-
 <msg type="info" file="Par" num="459" delta="old" >The Clock Report is not displayed in the non timing-driven mode.
-</msg>
-
-<msg type="warning" file="ParHelpers" num="362" delta="old" >There are <arg fmt="%d" index="1">8</arg> sourceless signals in this design. This design will not pass the DRC check run by Bitgen.
-
 </msg>
 
 <msg type="warning" file="ParHelpers" num="361" delta="old" >There are <arg fmt="%d" index="1">1</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
@@ -47,10 +19,6 @@
 </msg>
 
 <msg type="warning" file="Par" num="283" delta="old" >There are <arg fmt="%d" index="1">1</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
-
-</msg>
-
-<msg type="warning" file="Par" num="284" delta="old" >There are <arg fmt="%d" index="1">8</arg> sourceless signals in this design. This design will not pass the DRC check run by Bitgen.
 
 </msg>
 
