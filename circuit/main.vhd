@@ -50,7 +50,7 @@ architecture Behavioral of main is
 	signal whereToRead : integer range 0 to 7 := 0;
 	
 	-- READ STUFF
-	signal bin_value : std_logic_vector (7 downto 0);
+	signal bin_value : std_logic_vector (7 downto 0) := (others => '0');
 	
 	
 begin -- MAIN BEGIN
@@ -84,12 +84,14 @@ process
 			READ (line_num,line_content);  
 			--For each character in the line convert it to binary value.
 			--And then store it in a signal named 'bin_value'.
-			for j in 1 to 4 loop		
+			for j in 1 to 4 loop		 
 				char := line_content(j);
 				if(char = '0') then
 					bin_value(4-j) <= '0';
-				else
+				elsif (char = '1') then 
 					bin_value(4-j) <= '1';
+				else 
+					bin_value(7) <= '1';
 				end if;	
 			end loop;	
 			--wait for 10 ns; --after reading each line wait for 10ns.
@@ -142,7 +144,7 @@ begin
 		outp(4) <= '0';
 		outp(5) <= '0';
 		outp(6) <= '0';
-		outp(7) <= '0';
+		outp(7) <= bin_value(7);
 		
 	else 
 		whereToRead <= whereToRead + 1;

@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -119,8 +119,9 @@ WARNING:HDLCompiler:1369 - "C:\ROM_v2\circuit\main.vhd" Line 72: Possible infini
 
 Elaborating entity <main> (architecture <Behavioral>) from library <work>.
 WARNING:HDLCompiler:1127 - "C:\ROM_v2\circuit\main.vhd" Line 58: Assignment to myrom ignored, since the identifier is never used
-WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 118: count_2 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 148: wheretoread should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 120: count_2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 150: wheretoread should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "C:\ROM_v2\circuit\main.vhd" Line 53: Net <bin_value[7]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -128,8 +129,11 @@ WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 148: wheretoread shou
 
 Synthesizing Unit <main>.
     Related source file is "C:\ROM_v2\circuit\main.vhd".
-    WARNING:Xst:2404 -  FFs/Latches <outp<1:4>> (without init value) have a constant value of 0 in block <main>.
-    WARNING:Xst:2404 -  FFs/Latches <outp<4:7>> (without init value) have a constant value of 1 in block <main>.
+WARNING:Xst:2935 - Signal 'bin_value<7:4>', unconnected in block 'main', is tied to its initial value (0000).
+    WARNING:Xst:2404 -  FFs/Latches <outp<7:4>> (without init value) have a constant value of 0 in block <main>.
+    WARNING:Xst:2404 -  FFs/Latches <outp<4:3>> (without init value) have a constant value of 1 in block <main>.
+    WARNING:Xst:2404 -  FFs/Latches <outp<3:3>> (without init value) have a constant value of 0 in block <main>.
+    WARNING:Xst:2404 -  FFs/Latches <outp<3:3>> (without init value) have a constant value of 1 in block <main>.
     Summary:
 	no macro.
 Unit <main> synthesized.
@@ -261,13 +265,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.47 secs
+Total CPU time to Xst completion: 4.92 secs
  
 --> 
 
-Total memory usage is 294372 kilobytes
+Total memory usage is 293220 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
