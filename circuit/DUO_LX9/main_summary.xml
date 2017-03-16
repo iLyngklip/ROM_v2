@@ -4,11 +4,7 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<<<<<<< HEAD
-<DesignSummary rev="33">
-=======
-<DesignSummary rev="19">
->>>>>>> parent of e82de89... Det virker! Den læser fra en fil
+<DesignSummary rev="32">
 <CmdHistory>
 </CmdHistory>
 </DesignSummary>

@@ -29,29 +29,18 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 
 Data Sheet report:
 -----------------
-All values displayed in nanoseconds (ns)
+No constraints were found to generate data for the Data Sheet Report section.
+Use the Advanced Analysis (-a) option or generate global constraints for each
+clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
 
-<<<<<<< HEAD
-Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    2.089|         |         |         |
----------------+---------+---------+---------+---------+
-
-
-Analysis completed Thu Mar 16 10:34:28 2017 
-=======
-Analysis completed Thu Mar 16 10:03:13 2017 
->>>>>>> parent of e82de89... Det virker! Den læser fra en fil
+Analysis completed Thu Mar 16 10:57:22 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 290 MB
+Peak Memory Usage: 216 MB
 
 
 
