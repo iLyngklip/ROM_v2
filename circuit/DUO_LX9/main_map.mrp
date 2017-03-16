@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'main'
 
 Design Information
@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Mar 16 11:27:44 2017
+Mapped Date    : Thu Mar 16 12:04:17 2017
 
 Design Summary
 --------------
@@ -54,8 +54,8 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                0.00
 
-Peak Memory Usage:  365 MB
-Total REAL time to MAP completion:  4 secs 
+Peak Memory Usage:  288 MB
+Total REAL time to MAP completion:  5 secs 
 Total CPU time to MAP completion:   4 secs 
 
 Table of Contents

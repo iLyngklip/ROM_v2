@@ -5,19 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 75: Possible infinite loop; process does not have a wait statement
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\ROM_v2\circuit\main.vhd" Line 49: Syntax error near &quot;<arg fmt="%s" index="1">minrom</arg>&quot;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 128: <arg fmt="%s" index="1">count_2</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="1369" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 103: Possible infinite loop; process does not have a wait statement
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 158: <arg fmt="%s" index="1">wheretoread</arg> should be on the sensitivity list of the process
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 53: Net &lt;<arg fmt="%s" index="1">bin_value[7]</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="error" file="Xst" num="2864" delta="new" >Unit &lt;<arg fmt="%s" index="1">main</arg>&gt; : The conversion of memory element &lt;<arg fmt="%s" index="2">MyRom</arg>&gt; to macro RAM failed, because the memory write is asynchronous. Please review the Xilinx resources documentation and the XST user manual for coding guidelines or check the warning messages in the log file about unconnected clocks.
+<msg type="error" file="HDLCompiler" num="854" delta="old" >"C:\ROM_v2\circuit\main.vhd" Line 42: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>

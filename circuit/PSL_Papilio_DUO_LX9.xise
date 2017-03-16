@@ -832,6 +832,10 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="233"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
+    <file xil_pn:name="ROM.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="234"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
+    </file>
   </files>
 
   <properties>
@@ -860,7 +864,7 @@
     <property xil_pn:name="Change Device Speed To" xil_pn:value="-2" xil_pn:valueState="default"/>
     <property xil_pn:name="Change Device Speed To Post Trace" xil_pn:value="-2" xil_pn:valueState="default"/>
     <property xil_pn:name="Combinatorial Logic Optimization" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Compile EDK Simulation Library" xil_pn:value="true" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Compile EDK Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile SIMPRIM (Timing) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile UNISIM (Functional) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile XilinxCoreLib (CORE Generator) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
@@ -1197,12 +1201,12 @@
     <!-- project is analyzed based on files automatically identified as       -->
     <!-- include files.                                                       -->
     <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/main_pll.v" xil_pn:type="FILE_VERILOG"/>
-    <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/raw7seg.v" xil_pn:type="FILE_VERILOG"/>
-    <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/serial.v" xil_pn:type="FILE_VERILOG"/>
     <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/sha-256-functions.v" xil_pn:type="FILE_VERILOG"/>
     <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/sha256_transform.v" xil_pn:type="FILE_VERILOG"/>
     <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/uart_receiver.v" xil_pn:type="FILE_VERILOG"/>
     <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/uart_transmitter.v" xil_pn:type="FILE_VERILOG"/>
+    <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/serial.v" xil_pn:type="FILE_VERILOG"/>
+    <file xil_pn:name="C:/DesignLab-1.0.8/libraries/BitCoin_Miner/raw7seg.v" xil_pn:type="FILE_VERILOG"/>
     <file xil_pn:name="C:/DesignLab-1.0.8/libraries/Gameduino/revision.v" xil_pn:type="FILE_VERILOG"/>
   </autoManagedFiles>
 

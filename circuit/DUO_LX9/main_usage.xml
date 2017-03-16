@@ -4,8 +4,8 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="37">
-<DesignStatistics TimeStamp="Thu Mar 16 11:27:48 2017"><group name="NetStatistics">
+<DeviceUsageSummary rev="38">
+<DesignStatistics TimeStamp="Thu Mar 16 12:04:23 2017"><group name="NetStatistics">
 <item name="NumNets_Active" rev="36">
 <attrib name="value" value="10"/></item>
 <item name="NumNets_Gnd" rev="36">
@@ -45,23 +45,23 @@
 <item name="NumNodesOfType_Vcc_PINFEED" rev="36">
 <attrib name="value" value="3"/></item>
 </group>
+<group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="38">
+<attrib name="value" value="9"/></item>
+<item name="AGG_IO" rev="38">
+<attrib name="value" value="9"/></item>
+<item name="AGG_LOCED_IO" rev="38">
+<attrib name="value" value="9"/></item>
+<item name="NUM_BONDED_IOB" rev="38">
+<attrib name="value" value="9"/></item>
+<item name="NUM_LOCED_IOB" rev="38">
+<attrib name="value" value="9"/></item>
+</group>
 <group name="SiteStatistics">
 <item name="IOB-IOBM" rev="36">
 <attrib name="value" value="3"/></item>
 <item name="IOB-IOBS" rev="36">
 <attrib name="value" value="6"/></item>
-</group>
-<group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="37">
-<attrib name="value" value="9"/></item>
-<item name="AGG_IO" rev="37">
-<attrib name="value" value="9"/></item>
-<item name="AGG_LOCED_IO" rev="37">
-<attrib name="value" value="9"/></item>
-<item name="NUM_BONDED_IOB" rev="37">
-<attrib name="value" value="9"/></item>
-<item name="NUM_LOCED_IOB" rev="37">
-<attrib name="value" value="9"/></item>
 </group>
 </DesignStatistics>
 <ReportConfigData TimeStamp="Thu Mar 16 11:24:45 2017"><group name="REG_SR">

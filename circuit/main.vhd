@@ -34,8 +34,9 @@ use std.textio.all;
 --use UNISIM.VComponents.all;
 
 entity main is
-	Port ( outp : out  STD_LOGIC_VECTOR (7 downto 0);
-			  clk : in STD_LOGIC);
+	Port 	(	outp : out  STD_LOGIC_VECTOR (7 downto 0);
+				clk : in STD_LOGIC
+			);
 end main;
 
 architecture Behavioral of main is
@@ -43,6 +44,29 @@ architecture Behavioral of main is
 	-- ROM TYPE --
 	type ROM8x8 is array(0 to 7) of std_logic_vector (7 downto 0);
 	signal MyRom : ROM8x8;
+	
+	
+
+	
+	
+	
+	-- NY TYPE ROM
+--	ROM32X1_inst : ROM32X1
+--   generic map (
+--      INIT => X"00000000")
+--   port map (
+--      O => O,   -- ROM output
+--      A0 => A0, -- ROM address[0]
+--      A1 => A1, -- ROM address[1]
+--      A2 => A2, -- ROM address[2]
+--      A3 => A3, -- ROM address[3]
+--      A4 => A4  -- ROM address[4]
+--   );
+	
+	
+	
+	
+	
 	
 	-- CLOCKS --
 	signal clk_2 : std_logic;
@@ -56,6 +80,16 @@ architecture Behavioral of main is
 begin -- MAIN BEGIN
 	
 
+	minrom : entity work.rom
+	port map (
+		stuff_to_save => data_out,
+		WhereToRead => adress
+	);
+	
+	
+	
+	
+	
 	
 	
 --	MyRom <= (
@@ -107,7 +141,8 @@ process
       file_close(file_pointer);  --after reading all the lines close the file.	
 		--wait; -- på hvad?
     end process;
-
+	 
+-- END OF READ STUFF --------- END OF READ STUFF ----------- END OF READ STUFF ---------------
 
 
 
@@ -144,7 +179,8 @@ begin
 --				outp(7) <= tempStorage(7); 
 --				outp <= RAM(2);
 
-		outp <= MyRom(whereToRead);
+	--
+	--outp(0) <= MyRom(whereToRead)(0);
 --		outp(0) <= bin_value(0);
 --		outp(1) <= bin_value(1);
 --		outp(2) <= bin_value(2);
@@ -166,5 +202,26 @@ end process;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end Behavioral; -- MAIN END
+
+
+
+
+
 

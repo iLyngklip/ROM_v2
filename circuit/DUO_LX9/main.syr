@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: main.prj
 
@@ -111,26 +111,15 @@ Cores Search Directories           : {"../../../DesignLab-1.0.8/libraries/Benchy
 Parsing VHDL file "C:\ROM_v2\circuit\main.vhd" into library work
 Parsing entity <main>.
 Parsing architecture <Behavioral> of entity <main>.
-WARNING:HDLCompiler:1369 - "C:\ROM_v2\circuit\main.vhd" Line 75: Possible infinite loop; process does not have a wait statement
-
-=========================================================================
-*                            HDL Elaboration                            *
-=========================================================================
-
-Elaborating entity <main> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 128: count_2 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\ROM_v2\circuit\main.vhd" Line 158: wheretoread should be on the sensitivity list of the process
-WARNING:HDLCompiler:634 - "C:\ROM_v2\circuit\main.vhd" Line 53: Net <bin_value[7]> does not have a driver.
-
-=========================================================================
-*                           HDL Synthesis                               *
-=========================================================================
-ERROR:Xst:2864 - Unit <main> : The conversion of memory element <MyRom> to macro RAM failed, because the memory write is asynchronous. Please review the Xilinx resources documentation and the XST user manual for coding guidelines or check the warning messages in the log file about unconnected clocks.
+ERROR:HDLCompiler:806 - "C:\ROM_v2\circuit\main.vhd" Line 49: Syntax error near "minrom".
+WARNING:HDLCompiler:1369 - "C:\ROM_v2\circuit\main.vhd" Line 103: Possible infinite loop; process does not have a wait statement
+ERROR:HDLCompiler:854 - "C:\ROM_v2\circuit\main.vhd" Line 42: Unit <behavioral> ignored due to previous errors.
+VHDL file C:\ROM_v2\circuit\main.vhd ignored due to errors
 --> 
 
-Total memory usage is 250268 kilobytes
+Total memory usage is 212916 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
